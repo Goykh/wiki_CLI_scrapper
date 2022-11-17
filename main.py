@@ -15,7 +15,6 @@ wikipedia.set_lang('cs')
 article_cache = {}
 options_cache = {}
 
-
 class Menu:
 
     def show_menu(self):
@@ -61,6 +60,7 @@ class Menu:
                             print(f"Výraz '{user_input}' nebyl na stránce nalezen.")
 
             except wikipedia.exceptions.DisambiguationError as de:
+                article_cache[user_input] = de.options
                 print(f"Článek neexistuje, ale slovo '{user_input}' můžete nalézt v těchto článcích:")
                 for i in de.options:
                     print(i)
