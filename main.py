@@ -8,7 +8,10 @@ import wikipedia
 # you can find a list of languages
 # with wikipedia.languages()
 wikipedia.set_lang('cs')
-
+ 
+# Jednodušší by bylo použít cache nebo lru_cache z functools
+# Udělal jsem dva cache protože wikipedia.summary() vrací string
+# a wikipedia.search() list
 article_cache = {}
 options_cache = {}
 
