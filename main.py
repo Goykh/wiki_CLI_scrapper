@@ -1,6 +1,7 @@
 import subprocess
 import sys
 import time
+
 import wikipedia
 
 # sets language to czech,
@@ -10,8 +11,9 @@ wikipedia.set_lang('cs')
 
 article_cache = {}
 options_cache = {}
-class Menu:
 
+
+class Menu:
 
     def show_menu(self):
         """
@@ -89,7 +91,6 @@ class Menu:
             if i.lower() == user_input.lower():
                 article = wikipedia.summary(user_input.lower())
                 return article
-
 
 
 if __name__ == '__main__':
