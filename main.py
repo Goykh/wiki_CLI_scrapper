@@ -83,7 +83,7 @@ class Menu:
             subprocess.call(['clear'])
 
     @staticmethod
-    def check_if_article_exists(user_input: str):
+    def check_if_article_exists(user_input: str) -> str:
         """
         Takes in the user input and checks if the article exists.
         :param user_input: str:
